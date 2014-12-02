@@ -8,17 +8,9 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		while(sc.hasNext()){
-			String line = sc.nextLine();
-
-			Scanner lsc = new Scanner(line);
-			String s1 = lsc.next();
-			String s2 = lsc.next();
-			
-			if (s1.equals("0")&&s2.equals("0")){
-//				System.out.println("ooo");
-				break;
-			}
+		String s1 = sc.next();
+		String s2 = sc.next();
+		while(!(s1.equals("0")&&s2.equals("0"))){
 			
 			int minLength = s1.length()<s2.length()?s1.length():s2.length();
 
@@ -51,9 +43,11 @@ public class Main {
 				}
 			}
 			
-			
-			
+			s1 = sc.next();
+			s2 = sc.next();			
 		}
+		
+		sc.close();
 	}
 
 }
